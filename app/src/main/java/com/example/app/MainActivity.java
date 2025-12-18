@@ -27,6 +27,15 @@ public class MainActivity extends Activity {
         // mWebView.loadUrl("file:///android_asset/index.html");
     }
 
+  @Override
+    protected void onResume() {
+      super.onResume();
+
+      if (mWebView != null) {
+         mWebView.reload(); 
+  }
+}
+
     @Override
     public void onBackPressed() {
         if(mWebView.canGoBack()) {
